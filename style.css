@@ -1,0 +1,109 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(./prague-pixabay.jpg);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #e5dfdf;
+    font-size: 1.5rem;
+}
+
+header{
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+#date{
+    margin: 0.5rem;
+}
+#time{
+    margin: 0.5rem;
+}
+
+main{
+    width: 100vw;
+    height: 76vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#good{
+    margin: 1rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#sentence{
+    width: 25rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #fff;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-style: italic;
+    border-radius: 15px;
+    text-align: center;
+    background-color: #213b6d;
+    opacity: 0.8;
+}
+#author{
+    font-size: 1rem;
+    font-style: italic;
+    margin: 1rem;
+}
+
+#btn-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#btn{
+    width: 10rem;
+    height: 3rem;
+    margin: 1rem;
+    border-radius: 15px;
+    color:  #213b6d;
+    border-color:  #213b6d;
+    cursor: pointer;
+}
+
+#btn:hover{
+    transform: scale(1.2);
+}
+
+footer{
+    width: 100vw;
+    height: 4vh;
+    background-color: #e5dfdf;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 14px;
+    color:black;
+}
+span{
+    margin: 0.5rem;
+    font-style: italic;
+}
