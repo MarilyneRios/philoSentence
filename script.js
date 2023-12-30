@@ -26,13 +26,14 @@ let date = document.querySelector('#date');
 let dateReal = day + "/" + month + "/" + year;
 date.innerHTML = `<span id="dateSpan">${dateReal}</span>`;
 
-
 /* Afficher l'heure en temps réel */
 const formatTime = { hour: "2-digit", minute: "2-digit" };
 
+let heure;
+
 function afficherHeure() {
   const date = new Date();
-  let heure = date.toLocaleTimeString("fr-FR", formatTime);
+  heure = date.toLocaleTimeString("fr-FR", formatTime);
   let element = document.getElementById("timeSpan");
   element.innerHTML = heure;
 }
@@ -43,17 +44,17 @@ setInterval(afficherHeure, 1000);
 
 
 /* afficher le good en fonction de l'heure */
+
 function goodDisplay() {
-  // Récupérer l'heure locale sous forme de nombre entier
-  let heure = afficherHeure()
-  
+
+  let heureNum = parseInt(heure);//convertir l'heure en nombre
   let message = document.getElementById("goodSpan");
   
-  if (heure > 5 && heure < 12) {
+  if (heureNum > 5 && heureNum < 12) {
     message.innerHTML = 'Good Morning';
-  } else if (heure >= 12 && heure < 17) {
+  } else if (heureNum >= 12 && heureNum < 17) {
     message.innerHTML = 'Good Afternoon';
-  } else if (heure >= 17 && heure < 23) {
+  } else if (heureNum >= 17 && heureNum < 23) {
     message.innerHTML = 'Good Evening';
   } else {
     message.innerHTML = 'Good Night';
@@ -68,7 +69,8 @@ function newSentence(){
     .then(response => response.json())
     .then(data => {
         console.log(data);
-       philo.innerText = data.content;author.innerHTML="-"+data.author;
+       philo.innerHTML = data.content;
+       author.innerHTML="-"+data.author;
     })
     .catch(error => {
         console.error('Erreur :', error);
