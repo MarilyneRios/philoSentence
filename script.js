@@ -36,6 +36,7 @@ function afficherHeure() {
   heure = date.toLocaleTimeString("fr-FR", formatTime);
   let element = document.getElementById("timeSpan");
   element.innerHTML = heure;
+   goodDisplay();
 }
 
 afficherHeure();
