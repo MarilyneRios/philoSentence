@@ -65,12 +65,12 @@ setInterval(goodDisplay, 1000);
 
 /* afficher un phrase philo random en cliquant sur le btn */
 function newSentence(){
-    fetch('https://quotable.io/random')
+    fetch('https://api.chucknorris.io/jokes/random')
     .then(response => response.json())
     .then(data => {
         console.log(data);
-       philo.innerHTML = data.content;
-       author.innerHTML="-"+data.author;
+        philo.innerHTML = data.value;
+      
     })
     .catch(error => {
         console.error('Erreur :', error);
